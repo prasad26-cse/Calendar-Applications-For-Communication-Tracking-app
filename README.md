@@ -358,6 +358,7 @@ In the list of companies, click the "View" button next to any company. This will
 # Delete Company
 In the company list, click the "Delete" button to remove the company from the list.ete" button to remove the company from the list.
 
+
 # Limitation
 - **No Persistent Storage**: Data is lost on page refresh, as there’s no backend or database.
 - **Form Validation**: Basic input validation is missing (e.g., email or phone format).
@@ -367,6 +368,25 @@ In the company list, click the "Delete" button to remove the company from the li
 - **No Authentication:** Anyone can add, view, or delete companies without user authentication.
 - **No Error Handling:** There is little error feedback for invalid actions or form submissions.
 - **Limited Mobile Responsiveness:** The app may not be fully optimized for mobile devices.
+
+## Example Usage
+
+Here is a simple example of how to use the `CompanyManagement` component within your main application component.
+
+### App Component
+
+```javascript
+import React from 'react';
+import CompanyManagement from './CompanyManagement';
+
+const App = () => (
+  <div>
+    <CompanyManagement />
+  </div>
+);
+
+export default App;
+```
 
 # Dashboard.JSX
 
@@ -386,6 +406,8 @@ Make sure to install Bootstrap for styling:
 ```
 npm install bootstrap
 ```
+
+
 ## Dashboard Component Limitations
 
 1. **Single Company Selection**: Only one company can be selected for logging communications at a time.
@@ -399,6 +421,26 @@ npm install bootstrap
 5. **Modal Visibility**: The modal's visibility is controlled by state; improper handling may leave it open unintentionally.
 
 6. **Styling**: Requires Bootstrap for styling; responsiveness may vary based on the number of companies.
+
+
+## Example Usage
+
+Here is a simple example of how to use the `Dashboard` component within your main application component.
+
+### App Component
+
+```javascript
+import React from 'react';
+import Dashboard from './Dashboard';
+
+const App = () => (
+  <div>
+    <Dashboard />
+  </div>
+);
+
+export default App;
+```
 
 # Notifications.JSX
 
@@ -418,6 +460,7 @@ Make sure to install Bootstrap in your project to use this component:
 ```
 npm install bootstrap
 ```
+
 ## Notifications Component Limitations
 
 1. **Date Format**: Assumes communication dates are in `YYYY-MM-DD` format; deviations may cause incorrect filtering.
@@ -433,11 +476,46 @@ npm install bootstrap
 6. **Styling Dependencies**: Requires Bootstrap for styling; ensure it is included in your project.
 
 7. **Accessibility**: Basic accessibility features are included, but further enhancements may be needed for compliance.
+   
+ ## Example Usage
+
+Here is a simple example of how to use the `Notifications` component within your main application component.
+
+### App Component
+
+```javascript
+import React from 'react';
+import Notifications from './Notifications';
+
+const companies = [
+  {
+    name: 'Company A',
+    communications: [
+      { type: 'Email', date: '2023-10-01', notes: 'Follow-up on proposal' },
+      { type: 'Call', date: '2023-10-05', notes: 'Discuss project details' }
+    ]
+  },
+  {
+    name: 'Company B',
+    communications: [
+      { type: 'Meeting', date: '2023-10-03', notes: 'Quarterly review' }
+    ]
+  }
+];
+
+const App = () => (
+  <div>
+    <Notifications companies={companies} />
+  </div>
+);
+
+export default App;
 
 # Reporting_Analytics.jsx
 
 The `ReportingAnalytics` component provides a comprehensive dashboard for analyzing communication activities across different companies. It includes visual reports, filters, and downloadable reports to help users track and manage their communication efforts effectively.
 
+```
 ## Features
 
 - **Filters**: Enable filters to select specific companies, date ranges, and communication methods.
@@ -469,3 +547,29 @@ npm install react-chartjs-2 chart.js jspdf bootstrap
 6. **Styling Dependencies**: Requires Bootstrap for styling; ensure it is included in your project.
 
 7. **Real-Time Updates**: Simulates real-time updates with sample data; actual implementation may require a different approach for real-time data.
+
+ 
+ ## Example Usage
+
+Here is a simple example of how to use the `ReportingAnalytics` component within your main application component.
+
+### App Component
+
+```javascript
+import React from 'react';
+import ReportingAnalytics from './ReportingAnalytics';
+
+const companies = [
+  { id: 1, name: 'Company A' },
+  { id: 2, name: 'Company B' },
+  { id: 3, name: 'Company C' },
+];
+
+const App = () => (
+  <div>
+    <ReportingAnalytics companies={companies} />
+  </div>
+);
+
+export default App;
+```
