@@ -510,12 +510,12 @@ const App = () => (
 );
 
 export default App;
+```
 
 # Reporting_Analytics.jsx
 
 The `ReportingAnalytics` component provides a comprehensive dashboard for analyzing communication activities across different companies. It includes visual reports, filters, and downloadable reports to help users track and manage their communication efforts effectively.
 
-```
 ## Features
 
 - **Filters**: Enable filters to select specific companies, date ranges, and communication methods.
