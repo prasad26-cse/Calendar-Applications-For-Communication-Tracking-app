@@ -86,9 +86,12 @@ Finally, run the application locally using the following command:
 npm run dev
 Your application will be running at http://localhost:3000. Open this URL in your browser to see your React app in action.
 
-## Deploying Your React App on Vercel
 
-Follow the steps below to deploy your React app on Vercel.
+
+
+# Deploying Your React App on Vercel
+
+This guide will help you deploy your React app to Vercel.
 
 ## Steps to Deploy
 
