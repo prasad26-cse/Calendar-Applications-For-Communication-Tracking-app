@@ -3,11 +3,11 @@
 # What is the use of this Repo
 This Project is a Simple ReactJS Project which demonstrates the following
 
-Creating a Component in React \n
-Making HTTP calls\n
-Communicating between parent and child component\n
-Using Bootstrap along with React\n
-Using Basic Routing in React\n
+Creating a Component in React  Making HTTP calls
+Making HTTP calls
+Communicating between parent and child component
+Using Bootstrap along with React
+Using Basic Routing in React
 The project Template can be used to build bigger projects
 
 
