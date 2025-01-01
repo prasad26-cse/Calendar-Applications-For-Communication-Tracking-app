@@ -200,7 +200,8 @@ src/
 ```
 ### Example of the companies state:
 javascript
-```const [companies, setCompanies] = useState([
+```
+const [companies, setCompanies] = useState([
   {
     name: 'Company A',
     communications: [
@@ -221,7 +222,8 @@ javascript
     overdue: true,
     dueToday: false,
   },
-]);```
+]);
+```
 
 ### Key Functions
 handleCommunicationPerformed: Adds a new communication for the selected company and updates the state.
