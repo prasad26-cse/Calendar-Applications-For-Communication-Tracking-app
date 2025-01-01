@@ -42,16 +42,9 @@ To clone the project, use the following command in your terminal:
  ```bash
 git clone <repository-url>
 
-## Install All the NPM Packages
-After cloning the project, navigate into the project folder and run the following command to install the required npm packages:
+
+ Install All the NPM Packages
 
  ```bash
 npm install
-
-## Run the Application
-To run the application locally, use the following command:
-
- ```bash
-npm start
-
 
