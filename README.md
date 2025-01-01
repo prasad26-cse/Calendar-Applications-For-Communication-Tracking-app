@@ -103,4 +103,30 @@ To deploy using the Vercel CLI, you need to install it globally on your system. 
 ```bash
 npm install -g vercel
 ```
+### 3. Log in to Vercel
+Log in to your Vercel account by running the following command:
 
+```
+vercel login
+```
+You'll be prompted to enter your email address, and then you’ll receive a confirmation email. Follow the instructions to log in.
+
+### 4. Initialize Your Project with Vercel
+Navigate to the root directory of your React project and run the following command:
+```
+vercel
+```
+This command will guide you through a setup process. If this is your first time deploying, it will ask for:
+Project name
+Directory to deploy (press Enter to use the current directory)
+Link to an existing project (or create a new one)
+### 5. Deploy the Application
+Once your project is initialized with Vercel, you can deploy your React app with the following command:
+
+```
+vercel --prod
+```
+This will deploy your app to Vercel and make it live. The --prod flag ensures the deployment goes to the production environment.
+
+### 6. Access Your Deployed App
+After the deployment finishes, Vercel will provide a URL where your app is hosted. You can access your live application using the provided URL.
