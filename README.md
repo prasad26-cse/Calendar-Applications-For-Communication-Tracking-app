@@ -24,7 +24,8 @@ This project template can be used as a foundation to build bigger ReactJS projec
 - Install `create-react-app` globally to easily create and manage React applications. Run the following command in your terminal:
 
   ```bash
-  npm install -g create-react-app 
+  npm install -g create-react-app
+  ```
   
 ## Live Application URL
 
@@ -339,3 +340,30 @@ Here are the shortened limitations for the CommunicationModal.jsx component:
 5. **Limited Flexibility**: The modal is specifically designed for communication logging. It would be beneficial to refactor it to be more reusable for other types of modal forms.
 6. **Inline Styles**: The modal visibility is controlled using inline styles. It's best practice to move styles into external CSS classes for better styling control and readability.
 7. **Performance**: Large datasets can impact performance, particularly when rendering the list of companies or communication logs. Consider using **memoization** zone differences. For more robust date handling, consider integrating libraries like **moment.js** to ensure accurate date manipulation and time zone management.
+
+### CompanyManagement.JSX
+## Key Features:
+
+# Features
+Add a Company: Fill in the form with company details and click "Add Company."
+View Company: Click "View" to open a modal that displays detailed company information.
+Delete Company: Click "Delete" to remove a company from the list.
+
+# How to Use
+# Add a Company
+Fill out the company form with information such as Company Name, Location, LinkedIn Profile, Emails, Phone Numbers, and more.
+After filling in the details, click the "Add Company" button.
+# View Company
+In the list of companies, click the "View" button next to any company. This will open a modal showing the company's details.
+# Delete Company
+In the company list, click the "Delete" button to remove the company from the list.ete" button to remove the company from the list.
+
+# Limitation
+No Persistent Storage: Data is lost on page refresh, as there’s no backend or database.
+No Form Validation: Basic input validation is missing (e.g., email or phone format).
+No Search/Filter: There’s no functionality to search or filter companies.
+No Editing: Once added, companies cannot be edited—only deleted and re-added.
+Basic UI: The app uses minimal styling with no advanced UI or custom design.
+No Authentication: Anyone can add, view, or delete companies without user authentication.
+No Error Handling: There is little error feedback for invalid actions or form submissions.
+Limited Mobile Responsiveness: The app may not be fully optimized for mobile devices.
