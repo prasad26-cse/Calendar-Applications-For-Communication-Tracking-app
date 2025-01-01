@@ -52,31 +52,8 @@ In Visual Studio Code, open the terminal window by going to **View > Terminal** 
 In the terminal, type the following command to create a new project using Vite:
 
 ```bash
-npm create vite@latest bash```
+npm create vite@latest
 
-
-### 5. Press 'Y' to Proceed
-When prompted, press y to confirm and proceed with creating the project.
-
-### 6. Type Your Project Name
-You will be asked to enter the name for your project. Type your desired project name and press Enter.
-
-### 7. Choose React as the Template
-You will be prompted to choose a template. Select react from the options.
-
-### 8. Choose React + JavaScript
-Next, you’ll be asked if you want to use React with JavaScript or TypeScript. Choose React + JavaScript.
-
-### 9. Navigate to Your Project Folder
-
-```bash
-cd <your-project-name>
-
-### 10. Install NPM Packages
-Now, install all the required npm packages by running the following command:
-
-```bash
-npm install
 
 
 
