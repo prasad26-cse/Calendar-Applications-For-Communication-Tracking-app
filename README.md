@@ -329,17 +329,13 @@ javascript
 import 'bootstrap/dist/css/bootstrap.min.css';
 ```
 
-### Limitation 
-ere are the shortened limitations for the CommunicationModal.jsx component:
+### Limitation ( CommunicationModal.JSX)
+Here are the shortened limitations for the CommunicationModal.jsx component:
 
-State Management: Can become cumbersome with complex forms. Consider using Redux or Context API.
-Direct Mutation: State is updated directly, which can cause issues. Avoid mutating state; use immutable updates.
-Modal Visibility: Managing multiple modals may get complex. Centralize modal visibility using Context API or React Portals.
-Error Handling: Missing form validation. Add checks for required fields and data format.
-Limited Flexibility: Specific to communication logging. Consider making it more reusable for different modal types.
-Inline Styles: Modal visibility is controlled with inline styles. Use CSS classes for better styling control.
-Performance: Large datasets could impact performance. Use memoization or pagination.
-User Feedback: No success/error feedback. Add visual indicators like success messages or loading spinners.
-Accessibility: Lacks proper ARIA roles and keyboard navigation. Improve accessibility for better inclusivity.
-Time Zone Handling: Dates are not time-zone aware. Consider using libraries like moment.js for better date handling.
-
+1. **State Management**: Can become cumbersome with complex forms. Consider using **Redux** or **Context API** for better state management in larger applications.
+2. **Direct Mutation**: The state is updated directly, which can lead to potential issues. Always avoid mutating state directly. Use immutable updates for proper state management.
+3. **Modal Visibility**: Managing visibility for multiple modals can get complex. Consider centralizing modal visibility using **Context API** or **React Portals** to improve code maintainability.
+4. **Error Handling**: The form currently lacks validation. It's important to add checks for required fields and to ensure proper data formats (e.g., valid dates).
+5. **Limited Flexibility**: The modal is specifically designed for communication logging. It would be beneficial to refactor it to be more reusable for other types of modal forms.
+6. **Inline Styles**: The modal visibility is controlled using inline styles. It's best practice to move styles into external CSS classes for better styling control and readability.
+7. **Performance**: Large datasets can impact performance, particularly when rendering the list of companies or communication logs. Consider using **memoization** zone differences. For more robust date handling, consider integrating libraries like **moment.js** to ensure accurate date manipulation and time zone management.
