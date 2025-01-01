@@ -39,18 +39,19 @@ After starting the development server using `npm start`, your live application w
 ### 1. Clone the Project into Your Local Machine
 To clone the project, use the following command in your terminal:
 
-```bash
+ ```bash
 git clone <repository-url>
 
 ## Install All the NPM Packages
 After cloning the project, navigate into the project folder and run the following command to install the required npm packages:
-```bash
+
+ ```bash
 npm install
 
 ## Run the Application
 To run the application locally, use the following command:
 
-```bash
+ ```bash
 npm start
 
 
