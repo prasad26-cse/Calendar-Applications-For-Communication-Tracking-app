@@ -54,8 +54,37 @@ In the terminal, type the following command to create a new project using Vite:
 ```bash
 npm create vite@latest
 
+5. Press 'Y' to Proceed
+When prompted, press y to confirm and proceed with creating the project.
 
-### 5.
+6. Type Your Project Name
+You will be asked to enter the name for your project. Type your desired project name and press Enter.
+
+7. Choose React as the Template
+You will be prompted to choose a template. Select react from the options.
+
+8. Choose React + JavaScript
+Next, you’ll be asked if you want to use React with JavaScript or TypeScript. Choose React + JavaScript.
+
+9. Navigate to Your Project Folder
+```bash
+cd <your-project-name>
+
+Replace <your-project-name> with the name you provided earlier.
+
+10. Install NPM Packages
+Now, install all the required npm packages by running the following command:
+
+```bash
+npm install
+
+
+11. Run the Application
+Finally, run the application locally using the following command:
+
+```bash
+npm run dev
+Your application will be running at http://localhost:3000. Open this URL in your browser to see your React app in action.
 
 
 
