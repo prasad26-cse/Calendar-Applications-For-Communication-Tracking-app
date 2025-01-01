@@ -24,7 +24,7 @@ This project template can be used as a foundation to build bigger ReactJS projec
 - Install `create-react-app` globally to easily create and manage React applications. Run the following command in your terminal:
 
   ```bash
-  npm install -g create-react-app
+  npm install -g create-react-app 
   
 ## Live Application URL
 
@@ -52,7 +52,7 @@ In Visual Studio Code, open the terminal window by going to **View > Terminal** 
 In the terminal, type the following command to create a new project using Vite:
 
 ```bash
-npm create vite@latest
+npm create vite@latest ```
 
 
 ### 5. Press 'Y' to Proceed
