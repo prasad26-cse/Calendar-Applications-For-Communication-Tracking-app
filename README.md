@@ -130,3 +130,99 @@ This will deploy your app to Vercel and make it live. The --prod flag ensures th
 
 ### 6. Access Your Deployed App
 After the deployment finishes, Vercel will provide a URL where your app is hosted. You can access your live application using the provided URL.
+
+### App.jsx
+# React Calendar Application for Communication Tracking
+
+This is a React application designed to help track communications with companies. The app includes several components for managing companies, communications, calendar views, and reporting analytics.
+
+## Features
+- **Company Management**: Manage and view companies and their communication history.
+- **Communication Method Management**: Manage communication methods used for interactions with companies.
+- **Dashboard**: View communication data and track important tasks.
+- **Notifications**: Get notified about overdue or upcoming communications.
+- **Calendar View**: View scheduled communications in a calendar format.
+- **Reporting and Analytics**: Generate and display communication reports and analytics.
+
+## Requirements
+- Node.js (version 14.x or higher)
+- npm (version 6.x or higher)
+
+## Setup Instructions
+
+### 1. Clone the Repository
+Clone the project repository to your local machine using the following command:
+
+```bash
+git clone <repository-url>
+```
+2. Install Dependencies
+Navigate to the project directory and install the required npm packages:
+
+```
+cd <project-folder>
+npm install
+```
+3. Start the Application
+Run the application locally:
+
+```
+npm start
+```
+The application will be available at http://localhost:3000.
+
+### Application Design
+### Components
+Company Management: Displays and manages a list of companies.
+Communication Method Management: Manages communication methods (e.g., LinkedIn, Email, Phone Call).
+Dashboard: Provides a visual overview of communications.
+Notifications: Sends notifications based on the communication schedule.
+Calendar View: Displays communications in a calendar format.
+Reporting and Analytics: Displays communication reports and analytics.
+State Management
+companies: An array containing company details, communication history, and next scheduled communication.
+showCommunicationModal: Controls the visibility of the modal for adding new communication.
+selectedCompany: Tracks the currently selected company for adding communication.
+
+## Folder Structure
+plaintext
+```
+src/
+  components/
+    CalendarView.js         // Calendar View Component
+    CompanyManagement.js    // Company Management Component
+    CommunicationMethodManagement.js // Communication Method Management Component
+    Dashboard.js            // Dashboard Component
+    Notifications.js        // Notifications Component
+    ReportingAnalytics.js  // Reporting and Analytics Component
+  App.js                    // Main App Component
+  index.js                  // Entry point of the application
+```
+### Example of the companies state:
+javascript
+const [companies, setCompanies] = useState([
+  {
+    name: 'Company A',
+    communications: [
+      { type: 'LinkedIn Post', date: '2023-09-01', notes: 'Initial contact' },
+      { type: 'Email', date: '2023-09-05', notes: 'Follow-up' },
+    ],
+    nextCommunication: { type: 'Email', date: '2023-09-10' },
+    overdue: false,
+    dueToday: false,
+  },
+  {
+    name: 'Company B',
+    communications: [
+      { type: 'Phone Call', date: '2023-09-02', notes: 'Discussed project' },
+      { type: 'LinkedIn Message', date: '2023-09-06', notes: 'Sent proposal' },
+    ],
+    nextCommunication: { type: 'LinkedIn Post', date: '2023-09-08' },
+    overdue: true,
+    dueToday: false,
+  },
+]);
+
+### Key Functions
+handleCommunicationPerformed: Adds a new communication for the selected company and updates the state.
+handleAddCommunication: Adds new communication to a specified company and updates the state.
