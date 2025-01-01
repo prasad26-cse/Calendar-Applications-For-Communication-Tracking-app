@@ -228,3 +228,118 @@ const [companies, setCompanies] = useState([
 ### Key Functions
 handleCommunicationPerformed: Adds a new communication for the selected company and updates the state.
 handleAddCommunication: Adds new communication to a specified company and updates the state.
+
+## CommunicationModal.JSX
+
+The `CommunicationModal` component is a modal dialog used to log new communications for a selected company. It collects the following information:
+
+- **Type of Communication**: The type of communication made (e.g., LinkedIn Post, Email, Phone Call, or Meeting).
+- **Date of Communication**: The date when the communication took place.
+- **Notes**: Additional notes related to the communication.
+- **Next Scheduled Communication Type**: The type of the next scheduled communication.
+- **Next Scheduled Communication Date**: The date for the next communication.
+
+### Features
+
+- **State Management**: 
+  - `modalData`: Holds the data for the communication that will be logged.
+  - `showModal`: Controls the visibility of the modal.
+  - `companies`: List of companies with their communication history.
+  - `setCompanies`: A function to update the state of the companies.
+  
+- **Input Fields**:
+  - Dropdown for selecting the type of communication.
+  - Date input for the communication date and the next scheduled date.
+  - Textarea for adding notes regarding the communication.
+  - Dropdown for selecting the type of the next scheduled communication.
+
+### Modal Actions
+
+- **Submit**: When the user submits the form:
+  - The new communication data is added to the selected company.
+  - The `nextCommunication` details are updated with the next scheduled communication.
+  - The modal closes, and the form is reset.
+  
+- **Close**: The modal can be closed without saving by clicking the "Close" button.
+
+### Example Usage
+
+```javascript
+<CommunicationModal
+  showModal={showModal}
+  setShowModal={setShowModal}
+  companies={companies}
+  setCompanies={setCompanies}
+/>
+```
+State Structure Example
+modalData: The object holding the form data.
+
+type: Type of communication (e.g., "Email", "Phone Call").
+date: Date of the communication.
+notes: Notes regarding the communication.
+nextType: Type of the next scheduled communication.
+nextDate: Date of the next scheduled communication.
+companies: An array of company objects, each containing:
+communications: A list of past communications for the company.
+nextCommunication: The next scheduled communication.
+selected: A boolean flag indicating if the company is selected.
+
+## Example of companies State:
+javascript
+```
+const [companies, setCompanies] = useState([
+  {
+    name: 'Company A',
+    communications: [
+      { type: 'Email', date: '2023-09-01', notes: 'Initial contact' },
+    ],
+    nextCommunication: { type: 'Phone Call', date: '2023-09-15' },
+    selected: true,
+  },
+  {
+    name: 'Company B',
+    communications: [
+      { type: 'LinkedIn Post', date: '2023-09-03', notes: 'Sent proposal' },
+    ],
+    nextCommunication: { type: 'Email', date: '2023-09-10' },
+    selected: false,
+  },
+]);
+```
+# Styling
+The modal uses Bootstrap 4 for styling and has the following classes:
+
+.modal: Controls the modal display.
+.modal-dialog: Wraps the modal content.
+.modal-header, .modal-body, .modal-footer: Structure the modal layout.
+.btn-primary, .btn-secondary: Bootstrap button classes for styling buttons.
+
+### Bootstrap
+## Option 1: Using npm (recommended for React projects)
+Install Bootstrap via npm: Run the following command in your project directory to install Bootstrap:
+
+```
+npm install bootstrap
+```
+Import Bootstrap CSS: In your src/index.js or src/App.js file, import the Bootstrap CSS:
+
+javascript
+```
+import 'bootstrap/dist/css/bootstrap.min.css';
+```
+
+### Limitation 
+ere are the shortened limitations for the CommunicationModal.jsx component:
+
+State Management: Can become cumbersome with complex forms. Consider using Redux or Context API.
+Direct Mutation: State is updated directly, which can cause issues. Avoid mutating state; use immutable updates.
+Modal Visibility: Managing multiple modals may get complex. Centralize modal visibility using Context API or React Portals.
+Error Handling: Missing form validation. Add checks for required fields and data format.
+Limited Flexibility: Specific to communication logging. Consider making it more reusable for different modal types.
+Inline Styles: Modal visibility is controlled with inline styles. Use CSS classes for better styling control.
+Performance: Large datasets could impact performance. Use memoization or pagination.
+User Feedback: No success/error feedback. Add visual indicators like success messages or loading spinners.
+Accessibility: Lacks proper ARIA roles and keyboard navigation. Improve accessibility for better inclusivity.
+Time Zone Handling: Dates are not time-zone aware. Consider using libraries like moment.js for better date handling.
+
