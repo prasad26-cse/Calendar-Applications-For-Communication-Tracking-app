@@ -52,7 +52,7 @@ In Visual Studio Code, open the terminal window by going to **View > Terminal** 
 In the terminal, type the following command to create a new project using Vite:
 
 ```bash
-npm create vite@latest ```
+npm create vite@latest```
 
 
 ### 5. Press 'Y' to Proceed
