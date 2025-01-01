@@ -359,11 +359,113 @@ In the list of companies, click the "View" button next to any company. This will
 In the company list, click the "Delete" button to remove the company from the list.ete" button to remove the company from the list.
 
 # Limitation
-No Persistent Storage: Data is lost on page refresh, as there’s no backend or database.
-No Form Validation: Basic input validation is missing (e.g., email or phone format).
-No Search/Filter: There’s no functionality to search or filter companies.
-No Editing: Once added, companies cannot be edited—only deleted and re-added.
-Basic UI: The app uses minimal styling with no advanced UI or custom design.
-No Authentication: Anyone can add, view, or delete companies without user authentication.
-No Error Handling: There is little error feedback for invalid actions or form submissions.
-Limited Mobile Responsiveness: The app may not be fully optimized for mobile devices.
+- **No Persistent Storage**: Data is lost on page refresh, as there’s no backend or database.
+- **Form Validation**: Basic input validation is missing (e.g., email or phone format).
+- **No Search/Filter:** There’s no functionality to search or filter companies.
+- **No Editing:** Once added, companies cannot be edited—only deleted and re-added.
+- **Basic UI:** The app uses minimal styling with no advanced UI or custom design.
+- **No Authentication:** Anyone can add, view, or delete companies without user authentication.
+- **No Error Handling:** There is little error feedback for invalid actions or form submissions.
+- **Limited Mobile Responsiveness:** The app may not be fully optimized for mobile devices.
+
+# Dashboard.JSX
+
+The `Dashboard` component is a React functional component that serves as the main interface for managing company communications. It allows users to log communications, view company details, and manage notifications.
+
+## Features
+
+- **Company List**: Displays a list of companies with their communication history and next scheduled communication.
+- **Communication Logging**: A modal to log new communications for selected companies.
+- **Dynamic Highlighting**: Companies can be highlighted based on their communication status.
+- **Checkbox Selection**: Users can select companies to log communications for.
+
+## Installation
+
+Make sure to install Bootstrap for styling:
+
+```
+npm install bootstrap
+```
+## Dashboard Component Limitations
+
+1. **Single Company Selection**: Only one company can be selected for logging communications at a time.
+
+2. **Communication Logging**: Ensure the `CommunicationModal` is correctly implemented; otherwise, logging may fail.
+
+3. **State Management**: The component uses local state, which can lead to data loss if unmounted. Consider using a global state management solution for larger applications.
+
+4. **Data Structure**: The `communications` array must contain objects with `type`, `date`, and `notes`. Altering this structure may cause rendering issues.
+
+5. **Modal Visibility**: The modal's visibility is controlled by state; improper handling may leave it open unintentionally.
+
+6. **Styling**: Requires Bootstrap for styling; responsiveness may vary based on the number of companies.
+
+# Notifications.JSX
+
+The `Notifications` component displays notifications for overdue and today's communications for a list of companies. It provides a visual summary of communications that need attention.
+
+## Features
+
+- Displays a count of overdue communications.
+- Lists companies with overdue communications.
+- Displays a count of today's communications.
+- Lists companies with communications due today.
+
+## Installation
+
+Make sure to install Bootstrap in your project to use this component:
+
+```
+npm install bootstrap
+```
+## Notifications Component Limitations
+
+1. **Date Format**: Assumes communication dates are in `YYYY-MM-DD` format; deviations may cause incorrect filtering.
+  
+2. **Overdue Logic**: Relies on the current date; time zone discrepancies may affect overdue calculations.
+
+3. **Data Structure**: Expects each company to have a `communications` array; alterations may lead to issues.
+
+4. **Performance**: Filtering is done on the entire `companies` array, which may impact performance with large datasets.
+
+5. **No Notifications Handling**: Lacks visual feedback when there are no overdue or today's communications.
+
+6. **Styling Dependencies**: Requires Bootstrap for styling; ensure it is included in your project.
+
+7. **Accessibility**: Basic accessibility features are included, but further enhancements may be needed for compliance.
+
+# Reporting_Analytics.jsx
+
+The `ReportingAnalytics` component provides a comprehensive dashboard for analyzing communication activities across different companies. It includes visual reports, filters, and downloadable reports to help users track and manage their communication efforts effectively.
+
+## Features
+
+- **Filters**: Enable filters to select specific companies, date ranges, and communication methods.
+- **Communication Frequency Report**: Visual representation of the frequency of different communication methods.
+- **Engagement Effectiveness Dashboard**: Displays the effectiveness of various communication methods in terms of successful responses.
+- **Overdue Communication Trends**: Visualizes trends in overdue communications over a specified period.
+- **Downloadable Reports**: Options to download reports in PDF and CSV formats.
+- **Real-Time Activity Log**: Displays a log of communication activities with sorting options.
+
+## Installation
+
+Make sure to install the required dependencies in your project:
+
+```bash
+npm install react-chartjs-2 chart.js jspdf bootstrap
+```
+## Reporting Analytics Component Limitations
+
+1. **Date Format**: Assumes communication dates are in ISO format; deviations may cause incorrect filtering.
+
+2. **Sample Data**: Uses placeholder data for reports; actual data integration is required for real-world usage.
+
+3. **Performance**: May experience performance issues with a large number of activities due to real-time updates.
+
+4. **Sorting Logic**: Sorting is done on the client side; consider server-side sorting for large datasets.
+
+5. **Accessibility**: Basic accessibility features are included, but further enhancements may be needed for compliance.
+
+6. **Styling Dependencies**: Requires Bootstrap for styling; ensure it is included in your project.
+
+7. **Real-Time Updates**: Simulates real-time updates with sample data; actual implementation may require a different approach for real-time data.
